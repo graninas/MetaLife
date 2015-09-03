@@ -1,0 +1,12 @@
+*.hi
+*.o
+.buildDir
+.dist-buildwrapper
+.bin
+dist
+.project~
+*~
+.tree
+.swp
+./GlossMetaLife
+.exe
