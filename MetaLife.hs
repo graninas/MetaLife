@@ -51,7 +51,7 @@ toDead  c = c {aliveness = dead}
 rule :: Universe2 Cell -> Cell
 rule u = let
     current = extract u
-    nc = length $ filter isAlive (neighbours u)
+    nc = length $ filter isAlive (neighbours u) -- This can be optimized (use fold)
     in case nc of
         2         -> current
         3         -> toAlive current

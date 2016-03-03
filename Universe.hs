@@ -9,7 +9,7 @@ import qualified Data.Vector as V
 
 type Current = Int
 data Universe a = Universe (V.Vector a) Int
-newtype Universe2 a = Universe2 { getUniverse2 :: Universe (Universe a) }
+newtype Universe2 a = Universe2 { getUniverse2 :: Universe (Universe a) } -- TODO: is this type necessary? For comonad implementaion?
 
 left :: Universe a -> Universe a
 left (Universe v 0)   = Universe v (V.length v - 1)
